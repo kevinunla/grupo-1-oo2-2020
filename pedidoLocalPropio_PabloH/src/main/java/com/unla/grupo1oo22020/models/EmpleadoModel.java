@@ -4,11 +4,20 @@ import java.sql.Date;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class EmpleadoModel extends PersonaModel {
 	private long idEmpleado;
 	private float sueldoBasico;
 	private float comision;
+	@Temporal(TemporalType.TIME)
+	@DateTimeFormat(pattern = "HH:mm")
 	private LocalTime horarioTrabajoE;
+	@Temporal(TemporalType.TIME)
+	@DateTimeFormat(pattern = "HH:mm")
 	private LocalTime horarioTrabajoS;
 	private boolean gerente;
 	private LocalModel local;

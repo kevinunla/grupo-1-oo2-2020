@@ -7,6 +7,7 @@ import java.time.LocalTime;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
@@ -29,7 +30,7 @@ public class Empleado extends Persona{
 	@Column(name="gerente")
 	private boolean gerente;
 	
-	@ManyToOne(cascade = CascadeType.MERGE)
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "idLocal")
 	private Local local;
 

@@ -2,6 +2,8 @@ package com.unla.grupo1oo22020.models;
 
 import java.util.HashSet;
 import java.util.Set;
+import com.unla.grupo1oo22020.entities.Cliente;
+import com.unla.grupo1oo22020.entities.Empleado;
 
 
 public class LocalModel {
@@ -10,8 +12,8 @@ public class LocalModel {
 	private String direccion;
 	private float latitud;
 	private float longitud;
-	private Set<ClienteModel> listaClientes = new HashSet<ClienteModel>();
-	private Set<EmpleadoModel> listaEmpleados = new HashSet<EmpleadoModel>();
+	private Set<Cliente> listaClientes = new HashSet<Cliente>();
+	private Set<Empleado> listaEmpleados = new HashSet<Empleado>();
 
 	
 	public LocalModel() {
@@ -20,7 +22,7 @@ public class LocalModel {
 
 	public LocalModel(long idLocal, long telefono, String direccion, float latitud, float longitud) {
 		super();
-		this.idLocal = idLocal;
+		this.setIdLocal(idLocal);
 		this.telefono = telefono;
 		this.direccion = direccion;
 		this.latitud = latitud;
@@ -66,6 +68,22 @@ public class LocalModel {
 	public void setLongitud(float longitud) {
 		this.longitud = longitud;
 	}
-	
 
+	public Set<Cliente> getListaClientes() {
+		return listaClientes;
+	}
+
+	public void setListaClientes(Set<Cliente> listaClientes) {
+		this.listaClientes = listaClientes;
+	}
+
+	public Set<Empleado> getListaEmpleados() {
+		return listaEmpleados;
+	}
+
+	public void setListaEmpleados(Set<Empleado> listaEmpleados) {
+		this.listaEmpleados = listaEmpleados;
+	}
+	
+	
 }

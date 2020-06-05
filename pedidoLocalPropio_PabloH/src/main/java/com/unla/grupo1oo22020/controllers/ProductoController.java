@@ -51,7 +51,6 @@ public class ProductoController {
 	public ModelAndView create() {
 		ModelAndView mAV = new ModelAndView(ViewRouteHelpers.PRODUCTO_NEW);
 		mAV.addObject("producto", new ProductoModel());
-		
 		return mAV;
 	}
 		
@@ -106,37 +105,37 @@ public class ProductoController {
 		return new RedirectView(ViewRouteHelpers.PRODUCTO_ROOT);
 	}
 	
-	/*@PostMapping("/update")
-	public RedirectView update(@ModelAttribute("producto") ProductoModel productoModel, RedirectAttributes redirectAttrs) {
-		int i=0;
-		boolean encontrado = false;
-		
-		while(i<productoService.getAll().size() && !encontrado){
-			Producto p = productoService.getAll().get(i);
-				if(p.getNombre() == productoModel.getNombre()){
-					encontrado = true;
-				}
-			i++;
-		}
-		if(!encontrado){
-			productoService.insertOrUpdate(productoModel);
-			redirectAttrs
-				.addFlashAttribute("mensaje","Agregado Correctamente.")
-				.addFlashAttribute("clase", "success");
-		}else{
-			redirectAttrs
-				.addFlashAttribute("mensaje","No se pudo modificar, ya existe un producto con ese nombre.")
-				.addFlashAttribute("clase", "warning");
-		}
-		return new RedirectView(ViewRouteHelpers.PRODUCTO_ROOT);
-	}*/
-	
-	
-	
-	@PostMapping("/back")
-	public RedirectView back() {
-		
-		return new RedirectView(ViewRouteHelpers.PRODUCTO_ROOT);
-	}
+//	@PostMapping("/update")
+//	public RedirectView update(@ModelAttribute("producto") ProductoModel productoModel, RedirectAttributes redirectAttrs) {
+//		int i=0;
+//		boolean encontrado = false;
+//		
+//		while(i<productoService.getAll().size() && !encontrado){
+//			Producto p = productoService.getAll().get(i);
+//				if(p.getNombre() == productoModel.getNombre()){
+//					encontrado = true;
+//				}
+//			i++;
+//		}
+//		if(!encontrado){
+//			productoService.insertOrUpdate(productoModel);
+//			redirectAttrs
+//				.addFlashAttribute("mensaje","Agregado Correctamente.")
+//				.addFlashAttribute("clase", "success");
+//		}else{
+//			redirectAttrs
+//				.addFlashAttribute("mensaje","No se pudo modificar, ya existe un producto con ese nombre.")
+//				.addFlashAttribute("clase", "warning");
+//		}
+//		return new RedirectView(ViewRouteHelpers.PRODUCTO_ROOT);
+//	}
+//	
+//	
+//	
+//	@PostMapping("/back")
+//	public RedirectView back() {
+//		
+//		return new RedirectView(ViewRouteHelpers.PRODUCTO_ROOT);
+//	}
 
 }

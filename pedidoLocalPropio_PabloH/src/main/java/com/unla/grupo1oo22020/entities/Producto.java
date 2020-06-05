@@ -17,20 +17,20 @@ import org.hibernate.annotations.CreationTimestamp;
 public class Producto {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long idProducto;
+	long idProducto;
 	
 	@Column(name = "nombre")
-	private String nombre;
+	String nombre;
 
 	@Column(name = "descripcion")
-	private String descripcion;
+	String descripcion;
 
 	@Column(name = "precioUnitario")
-	private float precioUnitario;
+	float precioUnitario;
 
 	@Column(name = "fechaAlta")
 	@CreationTimestamp
-	private LocalDate fechaAlta;
+	LocalDate fechaAlta;
 
 	public Producto() {
 

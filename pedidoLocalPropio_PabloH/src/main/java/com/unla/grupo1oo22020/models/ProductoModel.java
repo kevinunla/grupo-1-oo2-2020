@@ -18,7 +18,7 @@ public class ProductoModel {
 
     public ProductoModel(long idProducto, String nombre, String descripcion, float precioUnitario, LocalDate fechaAlta){
         super();
-        this.idProducto=idProducto;
+        this.setIdProducto(idProducto);
         this.nombre=nombre;
         this.descripcion=descripcion;
         this.precioUnitario=precioUnitario;
@@ -29,7 +29,7 @@ public class ProductoModel {
 		return idProducto;
 	}
 
-	protected void setIdProducto(long idProducto) {
+	public void setIdProducto(long idProducto) {
 		this.idProducto = idProducto;
 	}
 	
