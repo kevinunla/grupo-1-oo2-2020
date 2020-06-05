@@ -50,11 +50,10 @@
 
 					<td><a th:href="@{/empleado/{id}(id=${empleado.idPersona})}">Modificar</a></td>
 					<td>
-						<form action="#"
-							th:action="@{/empleado/delete/{id}(id=${empleado.idPersona})}"
+						<form action="#" th:action="@{/empleado/delete/{id}(id=${empleado.idPersona})}"
 							method="post">
-							<button type="submit" class="btn btn-danger">Elminar
-								Empleado</button>
+							<button type="submit" class="btn btn-danger">Eliminar Empleado</button>
+							</form>
 					</td>
 				</tr>
 			</tbody>
