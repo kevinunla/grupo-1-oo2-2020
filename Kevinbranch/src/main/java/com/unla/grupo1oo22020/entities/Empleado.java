@@ -31,7 +31,7 @@ public class Empleado extends Persona{
 	private boolean gerente;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "idLocal")
+	@JoinColumn(name = "idLocal", nullable=false)
 	private Local local;
 
 
